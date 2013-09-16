@@ -10,6 +10,10 @@
     <many-to-one name="Cliente" column="cliente" />
     <property name="Fecha" column="fecha" />
     <property name="Total" column="total" />
+     <bag name="Detalles" inverse="true" table="t_factura_detalle">
+       <key column="factura"/>
+       <one-to-many class="SOAPServices.Dominio.FacturaDetalle"/>
+     </bag>
   </class>
 </hibernate-mapping>
 

@@ -5,7 +5,7 @@
                    default-lazy="false">
   <class name="FacturaDetalle" table="t_factura_detalle">
     <composite-id name="Pk">
-      <key-many-to-one name="Factura" column="factura"/>
+      <key-property name="Factura" column="factura"/>
       <key-many-to-one name="Producto" column="producto"/>
     </composite-id>
     <property name="Cantidad" column="cantidad"/>
