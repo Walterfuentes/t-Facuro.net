@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="SOAPServices"
+                   namespace="SOAPServices.Dominio"
+                   default-lazy="false">
+   <class name="Factura" table="t_factura">
+    <id name="Numero" column="numero">
+      <generator class="increment" />
+    </id>
+    <many-to-one name="Cliente" column="cliente" />
+    <property name="Fecha" column="fecha" />
+    <property name="Total" column="total" />
+  </class>
+</hibernate-mapping>
+
