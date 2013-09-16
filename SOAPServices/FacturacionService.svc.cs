@@ -20,7 +20,7 @@ namespace SOAPServices
         {
 
             Cliente cliente = clienteDAO.Obtener(rucCliente);
-            if (cliente == null)
+            if (cliente == null) //error por cliente inexistente
                 throw new FaultException<ClienteInexistenteError>(
                     new ClienteInexistenteError()
             {
